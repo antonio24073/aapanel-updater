@@ -1,0 +1,6 @@
+[submodule "aapanel"]
+	path = aapanel
+	url = git@github.com:antonio24073/aapanel.git
+[submodule "aapanel-preinstalled"]
+	path = aapanel-preinstalled
+	url = git@github.com:antonio24073/aapanel-preinstalled.git
