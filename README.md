@@ -11,7 +11,7 @@ git clone --recursive https://github.com/antonio24073/aapanel-updater.git
 # Modules
 
 - The main `docker-compose.yml` create a cron that build the new images with updates. This help fix to slow start container. 
-- The `aapanel` folder contains a clean install for aapanel with watchtower (get the new images with running containers). 
+- The `aapanel` folder contains a clean install for aapanel with watchtower (to get the new images with running containers). 
 - The `aapanel-preinstalled` is a structure to your own commited aapanel image after install the apps.
 
 You can use the aapanel submodules separetelly because I'm going to put it to update on my server. But I don't know until when.
