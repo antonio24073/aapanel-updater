@@ -15,12 +15,15 @@ services:
           - node.role == manager
   build-aapanel:
     image: docker
-    command: >
-      sh -c "docker build -t antonio24073/aapanel:centos-7 ./aapanel/docker-file
-              && docker push antonio24073/aapanel:centos-7
-              && docker build -t antonio24073/aapanel:centos-7-preinstalled ./aapanel-preinstalled/docker-file
-              && docker push antonio24073/aapanel:centos-7-preinstalled
-              "
+    command: > 
+      /bin/sh -c "echo $$DOCKERHUB_PASS | docker login -u $$DOCKERHUB_USER --password-stdin && 
+                  docker build -t antonio24073/aapanel:centos-7 ./aapanel/docker-file && 
+                  docker push antonio24073/aapanel:centos-7 && 
+                  docker build -t antonio24073/aapanel:centos-7-preinstalled ./aapanel-preinstalled/docker-file && 
+                  docker push antonio24073/aapanel:centos-7-preinstalled
+                  "
+    env_file:
+      - ./.env
     volumes:
       - './aapanel/docker-file:/aapanel/docker-file'
       - './aapanel-preinstalled/docker-file:/aapanel-preinstalled/docker-file'
