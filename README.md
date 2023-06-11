@@ -6,6 +6,7 @@ This project is made with 2 submodules: `aapanel` and `aapanel-preinstalled` (th
 
 ```
 git clone --recursive https://github.com/antonio24073/aapanel-updater.git
+cd aapanel-updater
 ```
 
 # Modules
