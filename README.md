@@ -19,7 +19,7 @@ You can use the aapanel submodules separetelly because I'm going to put it to up
 
 ## Instructions
 
-This instruction is for `aapanel-updater` only. There is another `README.md` inside each subfolder.
+This instruction is for `aapanel-updater` only. There are another `README.md` inside each subfolder.
 
 To run do this command in the project root folder:
 
