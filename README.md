@@ -17,6 +17,22 @@ git clone --recursive https://github.com/antonio24073/aapanel-updater.git
 You can use the aapanel submodules separetelly because I'm going to put it to update on my server. But I don't know until when.
 
 
+## Instructions
+
+This instruction is for `aapanel-updater` only. There is another `README.md` inside each subfolder.
+
+To run do this command in the project root folder:
+
+```
+docker compose up -d --build
+```
+
+To stop:
+
+```
+docker compose down
+```
+
 ----------------------
 
 # Donations
