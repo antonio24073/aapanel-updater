@@ -34,6 +34,11 @@ To stop:
 docker compose down
 ```
 
+## Read this:
+
+https://hub.docker.com/r/antonio24073/aapanel
+
+
 ----------------------
 
 # Donations
