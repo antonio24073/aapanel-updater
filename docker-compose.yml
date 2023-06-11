@@ -1,0 +1,35 @@
+version: "3.2"
+
+services:
+  swarm-cronjob:
+    image: crazymax/swarm-cronjob
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - "TZ=America/Sao_Paulo"
+      - "LOG_LEVEL=info"
+      - "LOG_JSON=false"
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+  build-aapanel:
+    image: docker
+    command: >
+      sh -c "docker build -t antonio24073/aapanel:centos-7 ./aapanel/docker-file
+              && docker push antonio24073/aapanel:centos-7
+              && docker build -t antonio24073/aapanel:centos-7-preinstalled ./aapanel-preinstalled/docker-file
+              && docker push antonio24073/aapanel:centos-7-preinstalled
+              "
+    volumes:
+      - './aapanel/docker-file:/aapanel/docker-file'
+      - './aapanel-preinstalled/docker-file:/aapanel-preinstalled/docker-file'
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      mode: global
+      labels:
+        - "swarm.cronjob.enable=true"
+        - "swarm.cronjob.schedule=0 0 */3 * *"
+        - "swarm.cronjob.skip-running=false"
+      restart_policy:
+        condition: none
