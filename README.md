@@ -9,8 +9,6 @@ git clone --recursive https://github.com/antonio24073/aapanel-updater.git
 cd aapanel-updater
 ```
 
-Rename and configure your `.env` file.
-
 ## Modules
 
 - The main `docker-compose.yml` create a cron that build the new images with updates. This help fix to slow start container. 
@@ -35,6 +33,12 @@ To stop:
 ```
 docker compose down
 ```
+
+# Own image
+
+If do you want to make your own image, do these steps:
+- Rename and configure your `.env` file.
+- Change your image names and repositories in `docker-compose.yml` files 
 
 ## Read this:
 
