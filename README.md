@@ -34,7 +34,7 @@ To stop:
 docker compose down
 ```
 
-# Own image
+## Own image
 
 If do you want to make your own image, do these steps:
 - Rename and configure your `.env` file.
