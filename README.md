@@ -1,6 +1,6 @@
 # aapanel-updater
 
-# Install 
+## Install 
 
 This project is made with 2 submodules: `aapanel` and `aapanel-preinstalled` (they are the two project folders). They work separately. Download them all with:
 
@@ -11,7 +11,7 @@ cd aapanel-updater
 
 Rename and configure your `.env` file.
 
-# Modules
+## Modules
 
 - The main `docker-compose.yml` create a cron that build the new images with updates. This help fix to slow start container. 
 - The `aapanel` folder contains a clean install for aapanel with watchtower (to get the new images with running containers). 
