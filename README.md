@@ -1,5 +1,13 @@
 # aapanel-updater
 
+## IMPORTANT
+
+There are two old versions for centos 7. The new versions are below:
+
+https://github.com/antonio24073/aapanel-ubuntu-24-04
+https://github.com/antonio24073/aapanel-ubuntu-24-04-preinstalled
+
+
 ## Install 
 
 This project is made with 2 submodules: `aapanel` and `aapanel-preinstalled` (they are the two project folders). They work separately. Download them all with:
