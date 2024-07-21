@@ -10,3 +10,9 @@
 [submodule "aapanel-ubuntu-24-04-preinstalled"]
 	path = aapanel-ubuntu-24-04-preinstalled
 	url = git@github.com:antonio24073/aapanel-ubuntu-24-04-preinstalled.git
+[submodule "aapanel-ubuntu-24-04-preinstalled-sysbox"]
+	path = aapanel-ubuntu-24-04-preinstalled-sysbox
+	url = git@github.com:antonio24073/aapanel-ubuntu-24-04-preinstalled-sysbox.git
+[submodule "aapanel-ubuntu-24-04-sysbox"]
+	path = aapanel-ubuntu-24-04-sysbox
+	url = git@github.com:antonio24073/aapanel-ubuntu-24-04-sysbox.git
