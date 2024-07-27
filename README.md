@@ -2,7 +2,7 @@
 
 ## IMPORTANT
 
-Centos 7 version is DEPRECATED; instead, use Ubuntu version.
+Centos 7 version is DEPRECATED. Instead, use Ubuntu version.
 
 
 ## Install 
