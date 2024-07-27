@@ -2,10 +2,7 @@
 
 ## IMPORTANT
 
-There are two old versions for centos 7. The new versions are below:
-
-https://github.com/antonio24073/aapanel-ubuntu-24-04
-https://github.com/antonio24073/aapanel-ubuntu-24-04-preinstalled
+Centos 7 version is DEPRECATED. Instead, use Ubuntu version.
 
 
 ## Install 
