@@ -7,3 +7,6 @@
 [submodule "aapanel-ubuntu-20-04-sysbox"]
 	path = aapanel-ubuntu-20-04-sysbox
 	url = git@github.com:antonio24073/aapanel-ubuntu-20-04-sysbox.git
+[submodule "aapanel-ubuntu-22-04-sysbox"]
+	path = aapanel-ubuntu-22-04-sysbox
+	url = git@github.com:antonio24073/aapanel-ubuntu-22-04-sysbox.git

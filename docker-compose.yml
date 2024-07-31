@@ -21,10 +21,10 @@ services:
                   docker push antonio24073/aapanel:centos-7 && 
                   docker build -t antonio24073/aapanel:centos-7-preinstalled ./aapanel-preinstalled/docker-file && 
                   docker push antonio24073/aapanel:centos-7-preinstalled && 
-                  docker build -t antonio24073/aapanel:ubuntu-24-04 ./aapanel-ubuntu-24-04/docker-file && 
-                  docker push antonio24073/aapanel:ubuntu-24-04 && 
-                  docker build -t antonio24073/aapanel:ubuntu-24-04-preinstalled ./aapanel-ubuntu-24-04-preinstalled/docker-file && 
-                  docker push antonio24073/aapanel:ubuntu-24-04-preinstalled
+                  docker build -t antonio24073/aapanel:ubuntu-20-04 ./aapanel-ubuntu-20-04/docker-file && 
+                  docker push antonio24073/aapanel:ubuntu-20-04 &&
+                  docker build -t antonio24073/aapanel:ubuntu-22-04 ./aapanel-ubuntu-22-04/docker-file && 
+                  docker push antonio24073/aapanel:ubuntu-22-04
                   "
     env_file:
       - ./.env
