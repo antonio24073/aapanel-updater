@@ -1,5 +1,3 @@
-version: "3.2"
-
 services:
   swarm-cronjob:
     image: crazymax/swarm-cronjob
@@ -17,26 +15,22 @@ services:
     image: docker
     command: > 
       /bin/sh -c "echo $$DOCKERHUB_PASS | docker login -u $$DOCKERHUB_USER --password-stdin && 
-                  docker build -t antonio24073/aapanel:centos-7 ./aapanel/docker-file && 
-                  docker push antonio24073/aapanel:centos-7 && 
-                  docker build -t antonio24073/aapanel:centos-7-preinstalled ./aapanel-preinstalled/docker-file && 
-                  docker push antonio24073/aapanel:centos-7-preinstalled && 
-                  docker build -t antonio24073/aapanel:ubuntu-20-04 ./aapanel-ubuntu-20-04/docker-file && 
-                  docker push antonio24073/aapanel:ubuntu-20-04 &&
-                  docker build -t antonio24073/aapanel:ubuntu-22-04 ./aapanel-ubuntu-22-04/docker-file && 
-                  docker push antonio24073/aapanel:ubuntu-22-04
+                  docker build -t antonio24073/aapanel:ubuntu-20-04-sysbox ./aapanel-ubuntu-20-04-sysbox/docker-file && 
+                  docker push antonio24073/aapanel:ubuntu-20-04-sysbox &&
+                  docker build -t antonio24073/aapanel:ubuntu-22-04-sysbox ./aapanel-ubuntu-22-04-sysbox/docker-file && 
+                  docker push antonio24073/aapanel:ubuntu-22-04-sysbox
                   "
     env_file:
       - ./.env
     volumes:
-      - './aapanel/docker-file:/aapanel/docker-file'
-      - './aapanel-preinstalled/docker-file:/aapanel-preinstalled/docker-file'
+      - './aapanel-ubuntu-20-04-sysbox/docker-file:/aapanel-ubuntu-20-04-sysbox/docker-file'
+      - './aapanel-ubuntu-22-04-sysbox/docker-file:/aapanel-ubuntu-22-04-sysbox/docker-file'
       - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
       mode: global
       labels:
         - "swarm.cronjob.enable=true"
-        - "swarm.cronjob.schedule=0 12 * * *"
+        - "swarm.cronjob.schedule=0 0 12 */7 * ?"
         - "swarm.cronjob.skip-running=false"
       restart_policy:
         condition: none
