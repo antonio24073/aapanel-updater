@@ -40,13 +40,8 @@ This instruction is for `aapanel-updater` only. There are another `README.md` in
 To run do this command in the project root folder:
 
 ```
-docker compose up -d --build
-```
-
-To stop:
-
-```
-docker compose down
+make up
+make rm
 ```
 
 ## Own image
