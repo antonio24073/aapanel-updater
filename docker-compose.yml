@@ -19,6 +19,7 @@ services:
       /bin/sh -c "echo $$DOCKERHUB_PASS | docker login -u $$DOCKERHUB_USER --password-stdin && 
                   cd ./aapanel-ubuntu-22-04-sysbox && 
                   apk add make &&
+                  make --no-print-directory mass_pull &&
                   make --no-print-directory mass_run &&
                   make --no-print-directory mass_update &&
                   make --no-print-directory mass_commit &&
