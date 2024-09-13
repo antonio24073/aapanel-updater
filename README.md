@@ -46,7 +46,7 @@ make rm
 ## Own image
 
 If do you want to make your own image, do these steps:
-- Rename and configure your `.env` file.
+- Rename and configura example files to `.env` and `commands.sh` file.
 - Change your image names and repositories in `docker-compose.yml` files 
 
 ## Read this:

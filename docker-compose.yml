@@ -1,6 +1,8 @@
 services:
   swarm-cronjob:
     runtime: runc
+    labels:
+      traefik.enable: false
     image: crazymax/swarm-cronjob
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
@@ -14,23 +16,17 @@ services:
           - node.role == manager
   build-aapanel:
     runtime: runc
+    labels:
+      traefik.enable: false
     image: docker
     command: > 
-      /bin/sh -c "echo $$DOCKERHUB_PASS | docker login -u $$DOCKERHUB_USER --password-stdin && 
-                  cd ./aapanel-ubuntu-22-04-sysbox && 
-                  apk add make &&
-                  make --no-print-directory mass_pull &&
-                  make --no-print-directory mass_run &&
-                  make --no-print-directory mass_update &&
-                  make --no-print-directory mass_commit &&
-                  make --no-print-directory mass_push &&
-                  make --no-print-directory mass_rm
-                  "
+      /bin/sh /commands.sh
     env_file:
       - ./.env
     volumes:
       - './aapanel-ubuntu-22-04-sysbox:/aapanel-ubuntu-22-04-sysbox'
       - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./commands.sh:/commands.sh"
     deploy:
       mode: global
       labels:
