@@ -9,10 +9,9 @@ Instead, use Ubuntu 22.04 version.
 
 ## Install 
 
-This project is made with 4 submodules: 
+This project is made with 3 submodules: 
 
 - `aapanel` and `aapanel-preinstalled` to Centos 7 
-- `aapanel-ubuntu-20-04-sysbox` 
 - `aapanel-ubuntu-22-04-sysbox`  
 
 (they are project folders). 
