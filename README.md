@@ -1,7 +1,7 @@
 # Aapanel Updater
 
 ## **Important Note**  
-The CentOS 7 version is **deprecated**.  
+The **CentOS 7** version is **deprecated**.  
 Please use the **Ubuntu 22.04** version instead.  
 
 ---
@@ -22,7 +22,7 @@ cd aapanel-updater
 
 ## Modules Overview  
 
-- **Main `docker-compose.yml`**:  
+- **`docker-compose.yml`**:  
   Creates a cron job to build updated images, addressing slow container startup issues.  
 
 - **`aapanel-ubuntu-22-04-sysbox`**:  
