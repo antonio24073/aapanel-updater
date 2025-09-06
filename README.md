@@ -1,7 +1,7 @@
 # Aapanel Updater
 
 ## **Important Note**  
-The **CentOS 7** version is **deprecated**.  
+The **CentOS 7** version is **deprecated** (**`aapanel` and `aapanel-preinstalled`** submodules). 
 Please use the **Ubuntu 22.04** version instead.  
 
 ---
